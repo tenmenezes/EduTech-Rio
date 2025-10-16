@@ -19,242 +19,251 @@
     <title>Home Page | EduTech Rio</title>
   </head>
 
-  <body class="m-0 p-0 box-border">
+  <body class="m-0 p-0 box-border relative">
+    <dotlottie-wc
+      src="https://lottie.host/d4243dcb-728b-49d2-8c2c-310694fefc5a/e1wNjj4w7R.lottie"
+      autoplay
+      loop
+      class="fixed inset-0 w-full h-full object-cover z-0 bg-black"
+      style="pointer-events: none"
+    ></dotlottie-wc>
+
+    <div class="fixed inset-0 backdrop-blur-sm bg-black/20 z-[1]"></div>
+
     <div
-      class="grid grid-cols-1 grid-rows-[auto_1fr_auto] gap-y-2 bg-blue-500 min-h-screen w-full overflow-x-hidden"
+      class="relative z-[2] grid grid-cols-1 grid-rows-[auto_1fr_auto] gap-y-2 min-h-screen w-full overflow-x-hidden"
     >
       <!-- Header com menu responsivo -->
-      <header class="bg-purple-600 flex justify-between items-center p-5">
-        <img
-          src="../utils/imgs/edutechText.png"
-          alt="Logo EduTech Rio"
-          class="w-32 h-auto"
-        />
+
+      <header
+        class="bg-purple-700/60 backdrop-blur-md flex justify-between items-center p-5 text-white shadow-lg"
+      >
+        <dotlottie-wc
+          src="https://lottie.host/238dc81c-5cb2-4cec-8b38-3a064fc17d83/3GW5MSQuv9.lottie"
+          style="width: 80px;height: 80px"
+          autoplay
+          loop
+        ></dotlottie-wc>
         <nav aria-label="Menu principal" class="hidden md:block transition-all">
           <ul class="flex gap-8 list-none m-0 p-0 items-center">
-            <li><a href="#" class="hover:underline">Home</a></li>
-            <li><a href="#sobre" class="hover:underline">Sobre</a></li>
-            <li><a href="#cursos" class="hover:underline">Cursos</a></li>
-            <li><a href="#contato" class="hover:underline">Contato</a></li>
+            <li><a href="#" class="hover:text-cyan-300 transition">Home</a></li>
+            <li>
+              <a href="#sobre" class="hover:text-cyan-300 transition">Sobre</a>
+            </li>
+            <li>
+              <a href="#cursos" class="hover:text-cyan-300 transition"
+                >Cursos</a
+              >
+            </li>
+            <li>
+              <a href="#contato" class="hover:text-cyan-300 transition"
+                >Contato</a
+              >
+            </li>
           </ul>
         </nav>
-        <!-- Botão hambúrguer -->
         <button
           id="menu-btn"
-          class="md:hidden text-white text-3xl transition-all"
+          class="md:hidden text-white text-3xl"
           aria-label="Abrir menu"
         >
           <i class="fas fa-bars"></i>
         </button>
       </header>
-      <!-- Menu mobile -->
-      <nav
-        id="mobile-menu"
-        class="fixed top-0 left-0 w-full h-full bg-purple-800 bg-opacity-95 z-50 flex-col items-center justify-center hidden transition-all"
+
+      <!-- Seção Hero -->
+      <section
+        class="grow bg-white/10 text-white flex flex-col md:flex-row justify-around items-center gap-6 p-6 rounded-2xl shadow-lg"
       >
-        <button
-          id="close-menu"
-          class="absolute top-4 right-6 text-white text-3xl transition-all"
-          aria-label="Fechar menu"
+        <dotlottie-wc
+          src="https://lottie.host/137ba515-d279-4b1f-a561-895829e466a8/94c1fCIns6.lottie"
+          style="width: 300px; height: 300px"
+          autoplay
+          loop
+        ></dotlottie-wc>
+        <div
+          class="flex flex-col justify-center items-center text-center max-w-lg"
         >
-          <i class="fas fa-times"></i>
-        </button>
-        <ul class="flex flex-col gap-8 text-white text-xl mt-20 justify-center items-center">
-          <li><a href="#" class="hover:underline">Home</a></li>
-          <li><a href="#sobre" class="hover:underline">Sobre</a></li>
-          <li><a href="#cursos" class="hover:underline">Cursos</a></li>
-          <li><a href="#contato" class="hover:underline">Contato</a></li>
-        </ul>
-      </nav>
-
-      <main class="flex flex-wrap gap-4 bg-yellow-500 p-4 w-full">
-        <!-- Hero -->
-        <section
-          class="grow bg-orange-100 flex flex-col md:flex-row justify-around items-center gap-6 p-4 rounded-lg shadow-md"
-        >
-          <dotlottie-wc
-            src="https://lottie.host/137ba515-d279-4b1f-a561-895829e466a8/94c1fCIns6.lottie"
-            style="width: 300px; height: 300px"
-            autoplay
-            loop
-          ></dotlottie-wc>
-          <div class="flex flex-col justify-center items-start">
-            <h2
-              class="text-3xl md:text-4xl font-bold text-orange-700 mb-2"
-            >
-              Bem-vindo à EduTech Rio!
-            </h2>
-            <p class="text-lg md:text-xl text-orange-900 mb-1 animate-pulse">
-              Transformando educação com tecnologia e inovação.
-            </p>
-            <span class="text-sm text-orange-600 italic animate-fade-in"
-              >Aprenda, evolua e conquiste seu futuro.</span
-            >
-            <a
-              href="#cursos"
-              class="mt-4 px-4 py-2 bg-orange-700 text-white rounded-lg shadow hover:bg-orange-800 transition"
-              >Saiba Mais</a
-            >
-          </div>
-        </section>
-        <!-- Sobre -->
-        <section
-          id="sobre"
-          class="grow bg-orange-200 flex flex-col justify-center items-start p-4 rounded-lg shadow-md"
-        >
-          <h2 class="text-2xl font-semibold text-orange-800 mb-2">
-            Sobre o Projeto
+          <h2 class="text-4xl font-bold text-cyan-300 mb-2">
+            Bem-vindo à EduTech Rio!
           </h2>
-          <p class="text-base text-orange-900 mb-2">
-            Nossa missão é democratizar o acesso à educação de qualidade, usando
-            tecnologia para conectar alunos e professores.
+          <p class="text-lg text-white/90 mb-2">
+            A <strong>EduTech Rio</strong> une educação e tecnologia em um só
+            espaço. Aqui você aprende de forma interativa, prática e conectada
+            com o mercado.
           </p>
-          <span class="text-xs text-orange-700"
-            >Educação para todos, em qualquer lugar.</span
-          >
-        </section>
-        <!-- Carousel -->
-        <section
-          class="grow bg-orange-300 border-indigo-500 flex justify-center items-center w-full carousel-container overflow-hidden rounded-lg shadow-md"
-        >
-          <div class="flex carousel-track gap-2 justify-center items-center">
-            <div
-              class="carousel-item flex justify-center items-center text-white text-2xl font-bold"
-            >
-              <dotlottie-wc
-                src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
-                style="width: 120px; height: 120px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-            <div
-              class="carousel-item flex justify-center items-center text-white text-2xl font-bold"
-            >
-              <dotlottie-wc
-                src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
-                style="width: 120px; height: 120px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-            <div
-              class="carousel-item flex justify-center items-center text-white text-2xl font-bold"
-            >
-              <dotlottie-wc
-                src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
-                style="width: 120px; height: 120px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-            <div
-              class="carousel-item flex justify-center items-center text-white text-2xl font-bold"
-            >
-              <dotlottie-wc
-                src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
-                style="width: 120px; height: 120px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-            <div
-              class="carousel-item flex justify-center items-center text-white text-2xl font-bold"
-            >
-              <dotlottie-wc
-                src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
-                style="width: 120px; height: 120px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-            <div
-              class="carousel-item flex justify-center items-center text-white text-2xl font-bold"
-            >
-              <dotlottie-wc
-                src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
-                style="width: 120px; height: 120px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-          </div>
-        </section>
-        <!-- Cursos -->
-        <section
-          id="cursos"
-          class="grow bg-orange-500 flex flex-col justify-center items-center p-4 rounded-lg shadow-md"
-        >
-          <h2 class="text-2xl font-semibold text-white mb-2">
-            Cursos Interativos
-          </h2>
-          <p class="text-base text-white mb-1 animate-pulse">
-            Explore nossos cursos e trilhas de aprendizado.
+          <p class="text-base text-white/80">
+            Oferecemos cursos inovadores, mentorias e ferramentas digitais para
+            transformar sua jornada de aprendizado e preparar você para o futuro
+            profissional.
           </p>
-          <span class="text-xs text-orange-200 animate-fade-in"
-            >Conteúdo atualizado e dinâmico para você!</span
-          >
           <a
-            href="#contato"
-            class="mt-4 px-4 py-2 bg-white text-orange-700 rounded-lg shadow hover:bg-orange-100 transition"
-            >Inscreva-se</a
+            href="#cursos"
+            class="mt-5 px-5 py-2 bg-cyan-500 hover:bg-cyan-400 text-black font-medium rounded-lg shadow-md transition"
           >
-        </section>
-        <!-- Contato -->
-        <section
-          id="contato"
-          class="grow bg-orange-800 flex flex-col justify-center items-center p-4 rounded-lg shadow-md"
-        >
-          <dotlottie-wc
-            src="https://lottie.host/ac22e17a-97fa-44f9-a47f-5e5e406a080f/fcwyPwC8AZ.lottie"
-            style="width: 200px; height: 200px"
-            autoplay
-            loop
-          ></dotlottie-wc>
-          <h2 class="text-xl font-semibold text-white mt-2">Fale Conosco</h2>
-          <p class="text-sm text-white">
-            Dúvidas, sugestões ou parcerias? Entre em contato!
-          </p>
-        </section>
-      </main>
+            Saiba Mais
+          </a>
+        </div>
+      </section>
 
-      <!-- Rodapé expandido -->
+      <!-- Sobre -->
+      <section
+        id="sobre"
+        class="grow bg-purple-800/40 text-white flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg"
+      >
+        <h2 class="text-3xl font-semibold text-cyan-300 mb-3">
+          Sobre o Projeto
+        </h2>
+        <p class="text-base text-white/90 mb-2 max-w-xl text-center">
+          O <strong>EduTech Rio</strong> nasceu com o propósito de democratizar
+          o acesso à educação de qualidade. Através da tecnologia, conectamos
+          alunos e professores de diferentes regiões, promovendo inclusão
+          digital e desenvolvimento pessoal.
+        </p>
+        <p class="text-base text-white/80 max-w-xl text-center mb-2">
+          Usamos metodologias modernas e acessíveis, combinando teoria e prática
+          para formar profissionais prontos para os desafios do mercado.
+        </p>
+        <span class="text-sm text-cyan-400 italic"
+          >Educação acessível, tecnológica e humana.</span
+        >
+      </section>
+
+      <!-- Carousel -->
+
+      <section
+        class="grow flex justify-center items-center w-full carousel-container overflow-hidden rounded-lg shadow-md"
+      >
+        <div
+          class="flex carousel-track justify-center items-center flex-nowrap gap-x-4"
+        >
+          <div
+            class="carousel-item min-w-[300px] max-w-[300px] h-[300px] flex-shrink-0 flex justify-center items-center text-white text-2xl font-bold"
+          >
+            <dotlottie-wc
+              src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
+              style="width: 300px; height: 300px"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+          <div
+            class="carousel-item min-w-[300px] max-w-[300px] h-[300px] flex-shrink-0 flex justify-center items-center text-white text-2xl font-bold"
+          >
+            <dotlottie-wc
+              src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
+              style="width: 300px; height: 300px"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+          <div
+            class="carousel-item min-w-[300px] max-w-[300px] h-[300px] flex-shrink-0 flex justify-center items-center text-white text-2xl font-bold"
+          >
+            <dotlottie-wc
+              src="https://lottie.host/75850520-9e96-4fe1-a30d-4c36b48a53ca/l1SDVVZzGh.lottie"
+              style="width: 300px; height: 300px"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+        </div>
+      </section>
+      <!-- Cursos -->
+      <section
+        id="cursos"
+        class="grow bg-gradient-to-br from-indigo-800/50 to-purple-700/50 flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg text-white"
+      >
+        <h2 class="text-3xl font-semibold text-cyan-300 mb-3">
+          Cursos Interativos
+        </h2>
+        <p class="text-base text-white/90 text-center max-w-md mb-2">
+          Cursos criados por especialistas, com foco em prática, inovação e
+          aplicabilidade real. Aprenda programação, design, marketing digital e
+          muito mais.
+        </p>
+        <p class="text-sm text-white/70 text-center max-w-md mb-2">
+          Tudo com mentores dedicados, material interativo e certificados
+          reconhecidos.
+        </p>
+        <a
+          href="#contato"
+          class="mt-4 px-5 py-2 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold rounded-lg shadow-md transition"
+        >
+          Inscreva-se
+        </a>
+      </section>
+
+      <!-- Contato -->
+      <section
+        id="contato"
+        class="grow bg-white/10 flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg text-white"
+      >
+        <dotlottie-wc
+          src="https://lottie.host/ac22e17a-97fa-44f9-a47f-5e5e406a080f/fcwyPwC8AZ.lottie"
+          style="width: 200px; height: 200px"
+          autoplay
+          loop
+        ></dotlottie-wc>
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-2">Fale Conosco</h2>
+        <p class="text-sm text-white/90 max-w-sm text-center mb-2">
+          Dúvidas, parcerias ou sugestões? Nossa equipe está à disposição para
+          te ajudar a trilhar o melhor caminho no mundo da tecnologia e
+          educação.
+        </p>
+        <p class="text-xs text-cyan-400 italic text-center">
+          Juntos, transformamos o aprendizado em oportunidades reais.
+        </p>
+      </section>
+
+      <!-- Rodapé -->
       <footer
-        class="bg-purple-800 flex flex-col md:flex-row justify-between items-center text-white text-center p-5 gap-2"
+        class="bg-purple-900/70 flex flex-col md:flex-row justify-between items-center text-white text-center p-5 gap-2 border-t border-white/20"
       >
         <div>
           <p class="text-sm">
             &copy; 2025 EduTech Rio. Todos os direitos reservados.
           </p>
-          <p class="text-sm">
-            Yago Menezes | Yasmim Mantovani | Thiago Rocha | Fred | Bruno |
-            Carlos
+          <p class="text-sm text-white/70">
+            Yago Menezes | Yasmim Mantovani | Thiago Rocha | Fred Wallace |
+            Bruno Washingtton | Carlos Eduardo
           </p>
         </div>
-        <div class="flex gap-4 mt-2 md:mt-0">
+        <div class="flex justify-center items-center gap-4 mt-2 md:mt-0">
           <a
             href="http://github.com/tenmenezes/EduTech-Rio/"
             aria-label="GitHub"
             target="_blank"
-            ><i class="fab fa-github hover:scale-110"></i
-          ></a>
-          <a href="#" aria-label="Instagram" target="_blank"
-            ><i class="fab fa-instagram hover:scale-110"></i
-          ></a>
-          <a href="#" aria-label="LinkedIn" target="_blank"
-            ><i class="fab fa-linkedin hover:scale-110"></i
-          ></a>
+          >
+            <i
+              class="fab fa-github hover:text-cyan-300 text-2xl transition"
+            ></i>
+          </a>
+          <a href="#" aria-label="Instagram" target="_blank">
+            <i
+              class="fab fa-instagram hover:text-cyan-300 text-2xl transition"
+            ></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" target="_blank">
+            <i
+              class="fab fa-linkedin hover:text-cyan-300 text-2xl transition"
+            ></i>
+          </a>
         </div>
       </footer>
     </div>
 
     <!-- Scripts Js -->
+
     <script
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
       type="module"
     ></script>
+
     <script src="../assets/gsap-public/minified/gsap.min.js"></script>
+
     <script src="../js/main.js"></script>
+
     <script>
       // Menu mobile JS
       const menuBtn = document.getElementById("menu-btn");

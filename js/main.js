@@ -1,29 +1,39 @@
 const track = document.querySelector(".carousel-track");
 const items = gsap.utils.toArray(".carousel-item");
 
-function createInfiniteCarousel() {
-  gsap.killTweensOf(items);
+// Defina o gap igual ao do Tailwind (gap-x-4 = 16px)
+const GAP = 16;
 
-  // Calcula largura total (item + gap)
-  const gap = parseFloat(getComputedStyle(track).gap) || 0;
-  const itemWidth = items[0].offsetWidth + gap;
+function createInfiniteCarousel() {
+  gsap.killTweensOf(track);
+
+  // Calcula largura total da track (todos os itens + gaps)
+  const itemWidth = items[0].offsetWidth + GAP;
   const totalWidth = itemWidth * items.length;
 
-  // Posiciona cada item em linha
-  gsap.set(items, { x: (i) => i * itemWidth });
+  // Duplicar os itens para garantir continuidade visual
+  if (track.children.length === items.length) {
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      track.appendChild(clone);
+    });
+  }
 
-  // Cria animação contínua e suave
-  gsap.to(items, {
-    x: `-=${totalWidth}`, // move para a esquerda
-    duration: 10, // ajuste a velocidade
+  // Anima a track para a esquerda
+  gsap.set(track, { x: 0 });
+  gsap.to(track, {
+    x: `-=${totalWidth}`,
+    duration: 15, // ajuste a velocidade
     ease: "none",
     repeat: -1,
     modifiers: {
-      x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+      x: (x) => {
+        let mod = parseFloat(x) % totalWidth;
+        return `${mod}px`;
+      },
     },
   });
 }
 
-// Inicializa e reconfigura no resize
 createInfiniteCarousel();
 window.addEventListener("resize", createInfiniteCarousel);
